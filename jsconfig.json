@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["components/*"],
+			"@services/*": ["services/*"],
+			"@ducks/*": ["redux/ducks/*"],
+			"@helpers/*": ["helpers/*"],
+			"@redux/*": ["redux/*"],
+      "@pages/*": ["pages/*"],
+    }
+  }
+}
