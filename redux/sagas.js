@@ -1,8 +1,10 @@
 import { all } from 'redux-saga/effects'
-import example from './sagas/example'
+import activities from './sagas/activities'
+import currencies from './sagas/currencies'
 
 export default function* sagas() {
   return yield all([
-    example(),
+    activities(),
+    currencies(),
   ])
 }

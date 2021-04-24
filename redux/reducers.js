@@ -1,5 +1,7 @@
-import example from './ducks/example'
+import activities from '@ducks/activities'
+import currencies from '@ducks/currencies'
 
 export default {
-  example,
+  activities,
+  currencies,
 }

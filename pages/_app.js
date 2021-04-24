@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import PropTypes from 'prop-types'
 import { END } from 'redux-saga'
-import store from '../redux/store'
+import store from '@redux/store'
 import '../assets/scss/styles.scss'
 
 const App = ({ Component, pageProps }) => (
@@ -14,13 +14,22 @@ const App = ({ Component, pageProps }) => (
 	</div>
 )
 
-// Sync redux store into server side
+/*
+	* -------------------------------------------------------------------
+	* Sync redux store into server side.
+	*
+	* You must to use `getInitialProps` method if you want to dispatch
+	* redux actions and sync between server and client sides (on any
+	* page)
+	*
+	* -------------------------------------------------------------------
+*/
 App.getInitialProps = async ({ Component, ctx }) => {
   const pageProps = {
     ...(Component.getInitialProps ? await Component.getInitialProps(ctx) : {}),
   }
 
-  if (ctx.req) {
+  if (ctx.store && ctx.req) {
     ctx.store.dispatch(END)
     await ctx.store.sagaTask.toPromise()
   }

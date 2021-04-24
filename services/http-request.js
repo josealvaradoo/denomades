@@ -23,6 +23,12 @@ class HttpRequest {
     }
   }
 
+  /*
+	 * -------------------------------------------------------------------
+	 * Gets either all or one resource from an endpoint given
+	 *
+	 * -------------------------------------------------------------------
+	*/
   async get(id = null) {
     try {
       let response = null
@@ -42,8 +48,7 @@ class HttpRequest {
 
       this.setResponse({
         data: response?.data,
-        code: response?.code,
-        message: response?.message,
+        code: 200,
       })
 
       return this.response
@@ -60,6 +65,12 @@ class HttpRequest {
     }
   }
 
+  /*
+	 * -------------------------------------------------------------------
+	 * Creates a resource with a data given from a specified endpoint
+	 *
+	 * -------------------------------------------------------------------
+	*/
   async post(data) {
     try {
       const response = await axios.post(`${process.env.API_URI}/${this.endpoint}`, data, {
@@ -70,8 +81,7 @@ class HttpRequest {
 
       this.setResponse({
         data: response?.data,
-        code: response?.code,
-        message: response?.message,
+        code: 201,
       })
 
       return this.response
@@ -88,6 +98,13 @@ class HttpRequest {
     }
   }
 
+  /*
+	 * -------------------------------------------------------------------
+	 * Updates a resource by the ID, with a data given from a specified
+	 * endpoint
+	 *
+	 * -------------------------------------------------------------------
+	*/
   async put(id, data) {
     try {
       const response = await axios.put(`${process.env.API_URI}/${this.endpoint}/${id}`, data, {
@@ -98,8 +115,7 @@ class HttpRequest {
 
       this.setResponse({
         data: response?.data,
-        code: response?.code,
-        message: response?.message,
+        code: 200,
       })
 
       return this.response
@@ -117,6 +133,12 @@ class HttpRequest {
     }
   }
 
+  /*
+	 * -------------------------------------------------------------------
+	 * Deletes a resource by the ID from a specified endpoint
+	 *
+	 * -------------------------------------------------------------------
+	*/
   async delete(id) {
     try {
       const response = await axios.delete(`${process.env.API_URI}/${this.endpoint}/${id}`, {
@@ -127,8 +149,7 @@ class HttpRequest {
 
       this.setResponse({
         data: response?.data,
-        code: response?.code,
-        message: response?.message,
+        code: 200,
       })
 
       return this.response
