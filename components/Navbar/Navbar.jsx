@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import PropTypes from 'prop-types'
 import FlagSelector from '@components/Selector/FlagSelector'
+import Search from '@components/Search/Search'
 import ShoppingCart from './ShoppingCart'
 
 const Navbar = ({ className }) => (
@@ -14,7 +15,8 @@ const Navbar = ({ className }) => (
 					</a>
 				</Link>
 			</div>
-			<div className="ed-item s-50 s-main-end">
+			<div className="ed-item s-50 s-main-end s-cross-center">
+				<Search />
 				<FlagSelector />
 				<Link href="/cart">
 					<a>

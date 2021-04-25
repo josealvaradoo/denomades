@@ -1,7 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { actions as CurrencyActions } from '@ducks/currencies'
-import { actions as ActivityActions, selector as ActivitySelector } from '@ducks/activities'
+import { selector as ActivitySelector } from '@ducks/activities'
 import MainLayout from '@components/Layouts/MainLayout'
 import Card from '@components/Card'
 
@@ -19,11 +18,6 @@ const Home = () => {
 		</div>
 	</MainLayout>
   )
-}
-
-Home.getInitialProps = (ctx) => {
-  ctx.store.dispatch(ActivityActions.fetch())
-  ctx.store.dispatch(CurrencyActions.fetch())
 }
 
 export default Home

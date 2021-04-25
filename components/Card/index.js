@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { useSelector, useDispatch } from 'react-redux'
 import { actions as CartActions, selector as CartSelector } from '@ducks/cart'
 import ShoppingCard from './ShoppingCard'
+import SearchCard from './SearchCard'
 import DefaultCard from './DefaultCard'
 
 const Card = ({
@@ -38,6 +39,13 @@ const Card = ({
 		onRemove={removeFromCart}
 	/>
       )
+    case 'search':
+      return (
+	<SearchCard
+		activity={activity}
+		className={className}
+	/>
+      )
     default:
       return (
 	<DefaultCard
@@ -53,7 +61,7 @@ const Card = ({
 }
 
 Card.propTypes = {
-  type: PropTypes.oneOf(['default', 'shopping']),
+  type: PropTypes.oneOf(['default', 'shopping, search']),
   landscape: PropTypes.bool,
   className: PropTypes.string,
   activity: PropTypes.shape({

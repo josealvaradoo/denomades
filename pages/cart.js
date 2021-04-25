@@ -1,7 +1,6 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { actions as CurrencyActions, selector as CurrencySelector } from '@ducks/currencies'
-import { actions as ActivityActions } from '@ducks/activities'
+import { selector as CurrencySelector } from '@ducks/currencies'
 import { actions as CartActions, selector as CartSelector } from '@ducks/cart'
 import MainLayout from '@components/Layouts/MainLayout'
 import Card from '@components/Card'
@@ -22,7 +21,7 @@ const Cart = () => {
 		<div className="ed-container">
 			<div className="ed-item ed-container s-70">
 				<div className="ed-item s-mb-2">
-					<h3>Articulos agregados</h3>
+					<h3>Actividades agregados</h3>
 				</div>
 				{
 					cart?.items?.map((item) => (
@@ -49,11 +48,6 @@ const Cart = () => {
 		</div>
 	</MainLayout>
   )
-}
-
-Cart.getInitialProps = (ctx) => {
-  ctx.store.dispatch(ActivityActions.fetch())
-  ctx.store.dispatch(CurrencyActions.fetch())
 }
 
 export default Cart
