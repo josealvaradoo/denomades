@@ -8,6 +8,7 @@ export function* fetchAll() {
     const activities = yield call(Service.getAll.bind(Service))
     yield put(ActivityActions.set(activities?.data || []))
   } catch (error) {
+    // eslint-disable-next-line
     console.log(error.message)
   }
 }

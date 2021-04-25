@@ -9,6 +9,7 @@ export function* fetchAll() {
     const currencies = yield call(Service.getAll.bind(Service))
     yield put(CurrencyActions.set(CurrencyHelper.transformObjectToArray(currencies?.data)))
   } catch (error) {
+    // eslint-disable-next-line
     console.log(error.message)
   }
 }

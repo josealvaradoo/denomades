@@ -53,7 +53,9 @@ class HttpRequest {
 
       return this.response
     } catch (err) {
+      // eslint-disable-next-line
       console.log(err?.message)
+
       this.setResponse({
         data: id === null ? [] : null,
         error: err?.message,
@@ -86,7 +88,9 @@ class HttpRequest {
 
       return this.response
     } catch (err) {
+      // eslint-disable-next-line
       console.log(err?.message)
+
       this.setResponse({
         data: null,
         error: err?.message,
@@ -120,6 +124,7 @@ class HttpRequest {
 
       return this.response
     } catch (err) {
+      // eslint-disable-next-line
       console.log(err?.message)
 
       this.setResponse({
@@ -154,6 +159,7 @@ class HttpRequest {
 
       return this.response
     } catch (err) {
+      // eslint-disable-next-line
       console.log(err?.message)
 
       this.setResponse({

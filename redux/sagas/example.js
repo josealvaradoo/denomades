@@ -6,6 +6,7 @@ export function* fetchExample() {
     const examples = yield call()
     yield put(ExampleActions.set(examples))
   } catch (error) {
+    // eslint-disable-next-line
     console.log(error.message)
   }
 }

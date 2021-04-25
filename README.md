@@ -4,28 +4,18 @@ It's a next.js project with a structure to use redux (redux ducks) and redux-sag
 
 ### Install
 ```
-yarn
+npm install
 ```
+
+### Enviroment vars
+Duplicate the `.env.example` file and name it `.env`
 
 ### Run project on development mode
 ```
-yarn dev
+npm run dev
 ```
 
 ### Run eslint
 ```
-yarn lint
+npm run lint
 ```
-
-### Run tests
-```
-yarn test
-```
-
-### Run saga's tests
-```
-yarn test:saga
-```
-
-### Deploy to Heroku
-This project is configured to make easy deploys to heroku. Just add your remote and push.
