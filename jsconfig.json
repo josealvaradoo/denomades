@@ -3,9 +3,11 @@
     "baseUrl": ".",
     "paths": {
       "@components/*": ["components/*"],
+			"@images/*": ["assets/images/*"],
 			"@services/*": ["services/*"],
 			"@ducks/*": ["redux/ducks/*"],
 			"@helpers/*": ["helpers/*"],
+			"@assets/*": ["assets/*"],
 			"@redux/*": ["redux/*"],
       "@pages/*": ["pages/*"],
     }

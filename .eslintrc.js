@@ -39,6 +39,7 @@ module.exports = {
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     'react/button-has-type': 'off',
     'react/jsx-boolean-value': [0, { always: ['full'] }],
+    'jsx-a11y/anchor-is-valid': 'off',
     'jsx-a11y/interactive-supports-focus': 'off',
     'jsx-a11y/click-events-have-key-events': 'off',
   },

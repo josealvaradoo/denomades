@@ -1,0 +1,57 @@
+.card {
+	width: 100%;
+	border-radius: .5rem;
+	overflow: hidden;
+	box-shadow: 0 0 5px #e7e7e7;
+	margin-bottom: 1rem;
+	background-color: white;
+
+	&-body {
+		padding: .5rem 0;
+		h4 {
+			min-height: 2rem;
+		}
+		p {
+			font-size: .9rem;
+			height: 5rem;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	}
+
+	&-footer {
+		padding: .5rem 0;
+		p {
+			margin: 0;
+			font-size: .9rem;
+			font-weight: bold;
+		}
+	}
+
+	&.landscape {
+		display: flex;
+		flex-flow: row nowrap;
+		& .card {
+			&-header {
+				width: 30%;
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+			&-content {
+				width: 70%;
+				flex: auto;
+				.card-body {
+					h4 {
+						min-height: auto;
+					}
+					p {
+						height: auto;
+					}
+				}
+			}
+		}
+	}
+}

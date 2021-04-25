@@ -1,0 +1,17 @@
+.text {
+	&-muted {
+		color: var(--text-muted);
+	}
+	&-undecoration {
+		text-decoration: none !important;
+	}
+}
+p {
+	.icon {
+		width: 1rem;
+	}
+
+	&.small {
+		font-size: .8rem;
+	}
+}

@@ -12,10 +12,12 @@ const initialState = {
 // Define local constants
 export const ADD_TO_CART = duck.defineType('ADD_TO_CART')
 export const REMOVE_FROM_CART = duck.defineType('REMOVE_FROM_CART')
+export const CLEAR_CART = duck.defineType('CLEAR_CART')
 
 // Define actions
 export const actions = ({
   add: duck.createAction(ADD_TO_CART),
+  clear: duck.createAction(CLEAR_CART),
   remove: duck.createAction(REMOVE_FROM_CART),
 })
 
@@ -36,4 +38,5 @@ export default duck.createReducer({
     items: state.items.filter((item) => item?.id !== payload?.id),
     total: Number(state.total - payload.price),
   }),
+  [CLEAR_CART]: () => initialState,
 }, initialState)

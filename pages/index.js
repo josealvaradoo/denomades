@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import { actions as CurrencyActions } from '@ducks/currencies'
 import { actions as ActivityActions, selector as ActivitySelector } from '@ducks/activities'
 import MainLayout from '@components/Layouts/MainLayout'
-import Card from '@components/Card/Card'
+import Card from '@components/Card'
 
 const Home = () => {
   const { activities } = useSelector(ActivitySelector)
