@@ -7,6 +7,7 @@ module.exports = withImage({
     return config
   },
   env: {
-    // Enviroments vars
+    API_URI: process.env.API_URI,
+		APP_TITLE: process.env.APP_TITLE
   },
 })
