@@ -1,0 +1,51 @@
+.layout {
+	display: flex;
+	height: 100%;
+	flex-flow: column nowrap;
+	.header {
+		min-height: 25px;
+	}
+	.footer {
+		min-height: 100px;
+	}
+	.main {
+		height: 100%;
+	}
+}
+.card {
+	border-radius: .5rem;
+	overflow: hidden;
+	box-shadow: 0 0 5px #e7e7e7;
+	margin-bottom: 1rem;
+
+	&-body {
+		padding: .5rem 0;
+		h4 {
+			min-height: 2rem;
+		}
+		p {
+			font-size: .9rem;
+			height: 5rem;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	}
+
+	&-footer {
+		padding: .5rem 0;
+		p {
+			margin: 0;
+			font-size: .9rem;
+			font-weight: bold;
+		}
+		.button {
+			display: inline-flex;
+			align-items: center;
+			font-size: .8rem;
+			.icon {
+				margin-right: .5rem;
+				width: 1rem;
+			}
+		}
+	}
+}

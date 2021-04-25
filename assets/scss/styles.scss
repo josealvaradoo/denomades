@@ -1,3 +1,4 @@
+@import "~ed-grid/ed-grid";
 @import "./modules/variables.scss";
 @import "./modules/reset.scss";
 @import "./modules/theme.scss";
@@ -9,5 +10,6 @@
 @import "./modules/navbar.scss";
 @import "./modules/footer.scss";
 @import "./modules/main.scss";
+@import "./modules/badge.scss";
 @import "./modules/typography.scss";
 @import "./modules/helpers";

@@ -1,0 +1,17 @@
+.navbar {
+	padding: 1rem;
+	margin-bottom: 1rem;
+	width: 100%;
+	img {
+		width: 200px;
+	}
+
+	&-shopping_cart {
+		position: relative;
+		.badge {
+			position: absolute;
+			top: -.5rem;
+			right: -.5rem;
+		}
+	}
+}

@@ -5,3 +5,11 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+html,
+body,
+#__next,
+.App {
+	height: 100%;
+	min-height: 100vh;
+}

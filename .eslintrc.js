@@ -29,7 +29,7 @@ module.exports = {
     'no-unsafe-optional-chaining': 'warn',
     'implicit-arrow-linebreak': ['error', 'beside'],
     'max-len': ['error', { code: 120 }],
-    'no-console': 'off',
+    'no-console': 'warn',
     'no-tabs': ['error', { allowIndentationTabs: true }],
     'no-mixed-spaces-and-tabs': 'off',
     semi: ['error', 'never'],
